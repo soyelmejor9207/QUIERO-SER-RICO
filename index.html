@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMC PROPIEDADES AMWAY - Tu Futuro Está en Tus Manos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Garamond', 'Cinzel', serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #000;
+            color: #FFD700;
+        }
+
+        .mirror-bg {
+            background: linear-gradient(135deg, 
+                #000000 0%, 
+                #1a1a1a 25%, 
+                #2d2d2d 50%, 
+                #1a1a1a 75%, 
+                #000000 100%);
+            position: relative;
+        }
+
+        .mirror-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(255, 215, 0, 0.1) 0%, 
+                transparent 25%, 
+                rgba(255, 215, 0, 0.05) 50%, 
+                transparent 75%, 
+                rgba(255, 215, 0, 0.1) 100%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFFF00);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: goldGlow 3s ease-in-out infinite, textShimmer 2s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+            letter-spacing: 3px;
+        }
+
+        @keyframes goldGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px #FFD700) drop-shadow(0 0 40px #FFA500);
+            }
+            50% { 
+                filter: drop-shadow(0 0 30px #FFD700) drop-shadow(0 0 60px #FFA500);
+            }
+        }
+
+        @keyframes textShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero p {
+            font-family: 'Garamond', serif;
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, 
+                #000000 0%, 
+                #1a1a1a 25%, 
+                #333333 50%, 
+                #1a1a1a 75%, 
+                #000000 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 2s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .cta-subtitle {
+            font-family: 'Garamond', serif;
+            font-size: 1.4rem;
+            color: #FFD700;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #FFD700;
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(26, 26, 26, 0.9) 50%, 
+                rgba(0, 0, 0, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 15px 35px rgba(255, 215, 0, 0.2),
+                inset 0 1px 0 rgba(255, 215, 0, 0.3),
+                0 0 50px rgba(255, 215, 0, 0.1);
+            color: #FFD700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 215, 0, 0.4), 
+                transparent);
+            transition: left 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 
+                0 25px 50px rgba(255, 215, 0, 0.4),
+                inset 0 1px 0 rgba(255, 215, 0, 0.5),
+                0 0 80px rgba(255, 215, 0, 0.3);
+            border-color: #FFFF00;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 1);
+        }
+
+        .btn small {
+            display: block;
+            font-family: 'Garamond', serif;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #000000, #1a1a1a, #000000);
+            color: #FFD700;
+            border: 3px solid #FFD700;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 
+                0 10px 30px rgba(255, 215, 0, 0.3),
+                0 0 50px rgba(255, 215, 0, 0.2);
+            z-index: 1000;
+            animation: goldenPulse 2s infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes goldenPulse {
+            0% { 
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3), 0 0 50px rgba(255, 215, 0, 0.2);
+            }
+            50% { 
+                transform: scale(1.1);
+                box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5), 0 0 80px rgba(255, 215, 0, 0.4);
+            }
+            100% { 
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3), 0 0 50px rgba(255, 215, 0, 0.2);
+            }
+        }
+
+        /* Video Motivation Section */
+        .video-motivation-section {
+            background: linear-gradient(135deg, 
+                #000000 0%, 
+                #1a1a1a 20%, 
+                #2d2d2d 40%, 
+                #1a1a1a 60%, 
+                #000000 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .video-motivation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.15) 0%, transparent 60%);
+            animation: videoPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes videoPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        .video-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #FFD700, #FF4500, #FFD700, #FFFF00);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 2s ease-in-out infinite;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.9);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+
+        .video-intro {
+            font-family: 'Garamond', serif;
+            font-size: 1.6rem;
+            color: #FFD700;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            font-weight: 600;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            position: relative;
+            z-index: 2;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 60px rgba(255, 215, 0, 0.3),
+                0 0 100px rgba(255, 215, 0, 0.2);
+            border: 3px solid rgba(255, 215, 0, 0.5);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(26, 26, 26, 0.9));
+            backdrop-filter: blur(10px);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 17px;
+        }
+
+        .after-video-message {
+            position: relative;
+            z-index: 2;
+            margin-top: 4rem;
+        }
+
+        .after-video-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #FFD700, #FF6347, #FFD700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 2s ease-in-out infinite;
+            text-shadow: 0 0 35px rgba(255, 215, 0, 0.8);
+            letter-spacing: 1px;
+        }
+
+        .persuasive-message {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(26, 26, 26, 0.95) 50%, 
+                rgba(0, 0, 0, 0.9) 100%);
+            padding: 3rem;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 
+                0 20px 40px rgba(255, 215, 0, 0.2),
+                inset 0 1px 0 rgba(255, 215, 0, 0.3);
+            text-align: left;
+        }
+
+        .persuasive-message p {
+            font-family: 'Garamond', serif;
+            font-size: 1.3rem;
+            color: #FFD700;
+            line-height: 1.8;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            font-weight: 500;
+        }
+
+        .counter-argument {
+            color: #FF6347;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(255, 99, 71, 0.6);
+            font-style: italic;
+        }
+
+        .persuasive-message strong {
+            color: #FFFF00;
+            text-shadow: 0 0 25px rgba(255, 255, 0, 0.8);
+            font-family: 'Cinzel', serif;
+        }
+
+        .motivation-section {
+            background: linear-gradient(135deg, 
+                #000000 0%, 
+                #1a1a1a 25%, 
+                #2d2d2d 50%, 
+                #1a1a1a 75%, 
+                #000000 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .motivation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+        }
+
+        .motivation-text {
+            font-family: 'Garamond', serif;
+            font-size: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.9;
+            text-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #FFD700, #FFFF00, #FFA500);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 2s ease-in-out infinite;
+            font-weight: 700;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 1);
+            font-family: 'Cinzel', serif;
+        }
+
+        .opportunity-section {
+            background: linear-gradient(135deg, 
+                #000000 0%, 
+                #1a1a1a 20%, 
+                #333333 40%, 
+                #1a1a1a 60%, 
+                #2d2d2d 80%, 
+                #000000 100%);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .opportunity-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: conic-gradient(from 0deg, 
+                rgba(255, 215, 0, 0.1), 
+                transparent, 
+                rgba(255, 215, 0, 0.05), 
+                transparent, 
+                rgba(255, 215, 0, 0.1));
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .opportunity-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFFF00);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textShimmer 2s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.8) 0%, 
+                rgba(26, 26, 26, 0.9) 50%, 
+                rgba(0, 0, 0, 0.8) 100%);
+            padding: 2.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 
+                0 15px 35px rgba(255, 215, 0, 0.1),
+                inset 0 1px 0 rgba(255, 215, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, 
+                transparent, 
+                rgba(255, 215, 0, 0.1), 
+                transparent);
+            animation: cardRotate 8s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes cardRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: #FFD700;
+            box-shadow: 
+                0 25px 50px rgba(255, 215, 0, 0.3),
+                inset 0 1px 0 rgba(255, 215, 0, 0.4),
+                0 0 80px rgba(255, 215, 0, 0.2);
+        }
+
+        .feature-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+        }
+
+        .feature-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: #FFD700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            letter-spacing: 1px;
+        }
+
+        .feature-card p {
+            font-family: 'Garamond', serif;
+            font-size: 1.1rem;
+            color: #FFD700;
+            line-height: 1.6;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .urgent-message {
+            background: linear-gradient(45deg, 
+                #000000 0%, 
+                #1a1a1a 25%, 
+                #FFD700 50%, 
+                #1a1a1a 75%, 
+                #000000 100%);
+            background-size: 400% 400%;
+            animation: urgentFlow 3s ease-in-out infinite;
+            color: #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            border-top: 3px solid #FFD700;
+            border-bottom: 3px solid #FFD700;
+        }
+
+        @keyframes urgentFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.4rem; }
+            .cta-title { font-size: 2.5rem; }
+            .buttons-grid { 
+                grid-template-columns: 1fr; 
+                gap: 2rem;
+            }
+            .btn { 
+                padding: 1.5rem 2rem; 
+                font-size: 1.1rem;
+            }
+            .motivation-text { font-size: 1.6rem; }
+            .opportunity-title { font-size: 2.2rem; }
+            .features-grid { 
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .urgent-message { 
+                font-size: 1.4rem;
+                padding: 2rem 1rem;
+            }
+
+            .video-motivation-section {
+                padding: 3rem 0;
+            }
+
+            .video-title { 
+                font-size: 2.2rem; 
+            }
+
+            .video-intro { 
+                font-size: 1.3rem; 
+            }
+
+            .video-container {
+                margin: 0 1rem 3rem 1rem;
+            }
+
+            .video-container iframe {
+                height: 250px;
+            }
+
+            .after-video-title { 
+                font-size: 2rem; 
+            }
+
+            .persuasive-message {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+
+            .persuasive-message p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FFD700, #FFA500);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #FFFF00, #FFD700);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero mirror-bg">
+        <div class="hero-content">
+            <h1>CMC PROPIEDADES AMWAY</h1>
+            <p>🌟 ¡TU FUTURO ESTÁ EN TUS MANOS! 🌟</p>
+            <p>La oportunidad que estabas esperando está aquí</p>
+        </div>
+    </section>
+
+    <!-- Urgent Message -->
+    <section class="urgent-message">
+        ⚡ ¡NO TIENES DINERO PORQUE NO QUIERES! ⚡<br>
+        ¡CAMBIA TU VIDA HOY MISMO!
+    </section>
+
+    <!-- Call to Action Buttons -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">🚀 ¡EMPIEZA TU TRANSFORMACIÓN! 🚀</h2>
+            <p class="cta-subtitle">En Colombia es difícil encontrar trabajo, pero aquí tienes la OPORTUNIDAD de crear tu propio futuro. Las puertas están abiertas para ti.</p>
+            
+            <div class="buttons-grid">
+                <a href="https://co.ashare.me/9rSqDemg" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                   class="btn">
+                    ⚡ VAMOS A EMPEZAR!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Motivation Section -->
+    <section class="video-motivation-section">
+        <div class="container">
+            <h2 class="video-title">🎯 ¡MIRA ESTE VIDEO Y CAMBIA TU MENTALIDAD! 🎯</h2>
+            <p class="video-intro">
+                Si estás cansado de la misma rutina, de los mismos problemas financieros, de ver pasar las oportunidades...
+                <span class="highlight">¡ESTE VIDEO TE VA A ABRIR LOS OJOS!</span>
+            </p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/2Iuuq5BtJmk?si=rIHNIu-s0tEPjFh_&autoplay=0&rel=0" 
+                    title="Video Motivacional - Cambia Tu Vida"
+                    frameborder="0" 
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="after-video-message">
+                <h3 class="after-video-title">🔥 ¿YA VISTE EL VIDEO? ENTONCES SABES QUE... 🔥</h3>
+                <div class="persuasive-message">
+                    <p>
+                        <span class="highlight">NO PUEDES SEGUIR VIVIENDO LA MISMA VIDA</span> y esperar resultados diferentes.<br><br>
+                        
+                        🚫 <strong>DEJA DE HACER ESTAS EXCUSAS:</strong><br>
+                        ❌ "No tengo tiempo" - <span class="counter-argument">¡Tienes tiempo para redes sociales pero no para tu futuro!</span><br>
+                        ❌ "No tengo experiencia" - <span class="counter-argument">¡Nadie nace sabiendo, TODOS empezamos desde cero!</span><br>
+                        ❌ "No soy bueno vendiendo" - <span class="counter-argument">¡Solo compartes productos que ya usas y amas!</span><br>
+                        ❌ "Es muy difícil" - <span class="counter-argument">¿Más difícil que vivir con deudas toda tu vida?</span><br><br>
+
+                        💡 <span class="highlight">LA VERDAD QUE NADIE TE DICE:</span><br>
+                        ✅ Cada día que pospones tu decisión, alguien más está construyendo la vida que TÚ quieres<br>
+                        ✅ Dentro de 5 años vas a estar en algún lugar... ¿dónde prefieres estar?<br>
+                        ✅ Tus hijos merecen ver a un padre/madre que LUCHA por sus sueños<br>
+                        ✅ Tu pareja necesita ver que eres capaz de CREAR abundancia, no solo esperar un salario<br><br>
+
+                        <span class="highlight">¡ESTE ES TU MOMENTO DE LEVANTARTE Y ACTUAR!</span><br>
+                        No mañana. No el próximo lunes. No "cuando tenga más tiempo".<br>
+                        <strong>¡AHORA MISMO!</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Section -->
+    <section class="motivation-section">
+        <div class="container">
+            <p class="motivation-text">
+                💪 <span class="highlight">¡TIENES EL PODER DE CAMBIAR TU VIDA!</span> 💪<br><br>
+                En un país donde las oportunidades escasean, nosotros te ofrecemos algo diferente: 
+                <span class="highlight">LA LIBERTAD FINANCIERA QUE MERECES</span><br><br>
+                No más excusas. No más esperar. <span class="highlight">¡EL MOMENTO ES AHORA!</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Opportunity Section -->
+    <section class="opportunity-section">
+        <div class="container">
+            <h2 class="opportunity-title">🌟 ¿POR QUÉ ELEGIR AMWAY? 🌟</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-emoji">💰</div>
+                    <div class="feature-title">INGRESOS ILIMITADOS</div>
+                    <p>Tu esfuerzo determina tus ganancias. Sin límites, sin techos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-emoji">🏠</div>
+                    <div class="feature-title">TRABAJA DESDE CASA</div>
+                    <p>Libertad total de horarios. Tú decides cuándo y dónde trabajar.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-emoji">🤝</div>
+                    <div class="feature-title">EQUIPO DE APOYO</div>
+                    <p>No estarás solo. Tendrás mentores y un equipo que te respaldará.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-emoji">🎓</div>
+                    <div class="feature-title">CAPACITACIÓN GRATUITA</div>
+                    <p>Te enseñamos todo lo que necesitas saber para triunfar.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-emoji">🌟</div>
+                    <div class="feature-title">PRODUCTOS PREMIUM</div>
+                    <p>Vende productos de la más alta calidad con garantía mundial.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-emoji">🚀</div>
+                    <div class="feature-title">CRECIMIENTO PERSONAL</div>
+                    <p>Desarrolla habilidades que te servirán toda la vida.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; position: relative; z-index: 2;">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 2.5rem; margin-bottom: 2rem; color: #FFD700; text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);">⏰ ¡EL TIEMPO NO ESPERA! ⏰</h3>
+                <p style="font-family: 'Garamond', serif; font-size: 1.8rem; color: #FFD700; text-shadow: 0 0 20px rgba(255, 215, 0, 0.6); line-height: 1.8;">
+                    Cada día que pasa sin actuar es un día menos para construir tu imperio financiero.<br>
+                    <span class="highlight">¡TU FAMILIA MERECE LO MEJOR!</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="urgent-message">
+        🔥 ¡ÚLTIMA OPORTUNIDAD DE CAMBIAR TU VIDA! 🔥<br>
+        ¡CONTACTA AHORA Y EMPIEZA A GANAR HOY MISMO!
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/573022656748?text=¡Hola!%20Quiero%20información%20sobre%20la%20oportunidad%20de%20negocio%20con%20Amway%20-%20CMC%20PROPIEDADES" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+       class="whatsapp-btn">
+        <svg width="45" height="45" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.088"/>
+        </svg>
+    </a>
+
+    <script>
+        // Ensure all links work properly with security
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add video container interaction effects
+            const videoContainer = document.querySelector('.video-container');
+            if (videoContainer) {
+                videoContainer.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.boxShadow = '0 35px 80px rgba(255, 215, 0, 0.4), 0 0 150px rgba(255, 215, 0, 0.3)';
+                });
+                
+                videoContainer.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '0 25px 60px rgba(255, 215, 0, 0.3), 0 0 100px rgba(255, 215, 0, 0.2)';
+                });
+            }
+
+            // Enhanced button interactions
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.05)';
+                    this.style.boxShadow = '0 25px 50px rgba(255, 215, 0, 0.4), inset 0 1px 0 rgba(255, 215, 0, 0.5), 0 0 80px rgba(255, 215, 0, 0.3)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 15px 35px rgba(255, 215, 0, 0.2), inset 0 1px 0 rgba(255, 215, 0, 0.3), 0 0 50px rgba(255, 215, 0, 0.1)';
+                });
+
+                // Add click effect
+                button.addEventListener('click', function(e) {
+                    // Create ripple effect
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        border-radius: 50%;
+                        background: rgba(255, 215, 0, 0.6);
+                        transform: scale(0);
+                        animation: ripple 0.6s linear;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        pointer-events: none;
+                    `;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Add floating animation to feature cards
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.3}s`;
+                
+                // Add hover effect for cards
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.05)';
+                    this.style.borderColor = '#FFD700';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.borderColor = 'rgba(255, 215, 0, 0.3)';
+                });
+            });
+
+            // WhatsApp button enhanced interaction
+            const whatsappBtn = document.querySelector('.whatsapp-btn');
+            whatsappBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.15)';
+                this.style.boxShadow = '0 20px 50px rgba(255, 215, 0, 0.5), 0 0 100px rgba(255, 215, 0, 0.4)';
+            });
+            
+            whatsappBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = '0 10px 30px rgba(255, 215, 0, 0.3), 0 0 50px rgba(255, 215, 0, 0.2)';
+            });
+
+            // Add security measures for external links
+            const externalLinks = document.querySelectorAll('a[href^="http"]');
+            externalLinks.forEach(link => {
+                // Ensure proper security attributes
+                link.setAttribute('rel', 'noopener noreferrer');
+                link.setAttribute('target', '_blank');
+                
+                // Add click tracking and confirmation for external links
+                link.addEventListener('click', function(e) {
+                    // Flash effect on click
+                    this.style.filter = 'brightness(1.5)';
+                    setTimeout(() => {
+                        this.style.filter = 'brightness(1)';
+                    }, 150);
+                    
+                    // Log click for analytics (optional)
+                    console.log(`Clicked: ${this.href}`);
+                });
+            });
+
+            // Add smooth scroll behavior
+            document.documentElement.style.scrollBehavior = 'smooth';
+
+            // Add entrance animations
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.feature-card, .btn, .cta-title, .motivation-text, .video-container, .persuasive-message');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+
+            // Initialize elements for animation
+            const animatedElements = document.querySelectorAll('.feature-card, .btn, .cta-title, .motivation-text, .video-container, .persuasive-message');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(50px)';
+                element.style.transition = 'all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial check
+
+            // Add performance optimizations
+            let ticking = false;
+            function updateAnimations() {
+                animateOnScroll();
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(updateAnimations);
+                    ticking = true;
+                }
+            });
+        });
+
+        // CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                33% { transform: translateY(-10px) rotate(1deg); }
+                66% { transform: translateY(5px) rotate(-1deg); }
+            }
+            
+            .feature-card {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            /* Additional glow effects */
+            .btn:active {
+                transform: translateY(-8px) scale(1.02);
+                transition: transform 0.1s ease;
+            }
+            
+            /* Enhanced accessibility */
+            .btn:focus,
+            .whatsapp-btn:focus {
+                outline: 3px solid rgba(255, 215, 0, 0.8);
+                outline-offset: 4px;
+            }
+            
+            /* Print styles */
+            @media print {
+                .whatsapp-btn {
+                    display: none;
+                }
+                
+                .btn::after {
+                    content: " (" attr(href) ")";
+                    font-size: 0.8em;
+                    color: #666;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add error handling for failed link loads
+        window.addEventListener('error', function(e) {
+            if (e.target.tagName === 'A') {
+                console.warn('Link failed to load:', e.target.href);
+                // Could show user-friendly error message here
+            }
+        });
+
+        // Add page visibility API for performance
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // Pause animations when tab is not visible
+                document.body.style.animationPlayState = 'paused';
+            } else {
+                // Resume animations when tab becomes visible
+                document.body.style.animationPlayState = 'running';
+            }
+        });
+    </script>
+</body>
+</html>
